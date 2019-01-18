@@ -107,7 +107,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.lblUserName.text = sortedData![indexPath.row].Name!
             
             cell.lblElapsedTime.text = elapsedTimeCalculater(text: sortedData![indexPath.row].CreatedAt!)
-            cell.lblUserFollowersCount.text = sortedData![indexPath.row].FollowerCount!
+            cell.lblUserFollowersCount.text = "\(sortedData![indexPath.row].FollowerCount!) followers"
             cell.imgViewUser.sd_setImage(with: URL(string: sortedData![indexPath.row].photo!))
         }
         return cell
